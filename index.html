@@ -5,192 +5,141 @@ notitle: true
 ---
 
 <style>
-  .hero {
-    padding: 3.5rem 0 2rem;
-    text-align: center;
-  }
 
-  .hero h1 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
+.hero{
+text-align:center;
+padding:40px 0 20px;
+}
 
-  .hero p {
-    max-width: 860px;
-    margin: 0 auto 1rem;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #444;
-  }
+.hero h1{
+font-size:2.3rem;
+font-weight:700;
+margin-bottom:10px;
+}
 
-  .hero-badge {
-    display: inline-block;
-    padding: 0.45rem 0.9rem;
-    border-radius: 999px;
-    background: #f3f6fb;
-    color: #1f3c88;
-    font-size: 0.92rem;
-    font-weight: 600;
-    margin-top: 0.75rem;
-  }
+.hero p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#555;
+}
 
-  .section-title {
-    margin-top: 2.5rem;
-    margin-bottom: 1.2rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-  }
+.section-title{
+text-align:center;
+margin-top:40px;
+font-size:1.8rem;
+font-weight:700;
+}
 
-  .section-desc {
-    text-align: center;
-    color: #666;
-    max-width: 760px;
-    margin: 0 auto 2rem;
-    line-height: 1.8;
-  }
+.space-card{
+border:1px solid #eee;
+border-radius:14px;
+padding:20px;
+margin-top:30px;
+box-shadow:0 8px 24px rgba(0,0,0,0.05);
+}
 
-  .space-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
+.space-card h3{
+font-size:1.3rem;
+font-weight:700;
+margin-bottom:8px;
+}
 
-  .space-card {
-    border: 1px solid #e6e6e6;
-    border-radius: 18px;
-    padding: 1.2rem;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-  }
+.space-card p{
+color:#555;
+margin-bottom:10px;
+}
 
-  .space-card h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
+.space-card a{
+font-weight:600;
+}
 
-  .space-card p {
-    color: #555;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-  }
+gradio-app{
+width:100%;
+min-height:700px;
+display:block;
+border-radius:12px;
+overflow:hidden;
+}
 
-  .space-link {
-    display: inline-block;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-
-  .space-embed {
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #eee;
-  }
-
-  gradio-app {
-    display: block;
-    width: 100%;
-    min-height: 720px;
-  }
-
-  .footer-note {
-    text-align: center;
-    color: #777;
-    margin: 2rem auto 3rem;
-    font-size: 0.95rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding-top: 2rem;
-    }
-
-    .hero h1 {
-      font-size: 1.9rem;
-    }
-
-    gradio-app {
-      min-height: 560px;
-    }
-  }
 </style>
 
+
 <section class="hero">
-  <h1>肖航课题组 · Xiao Research Group</h1>
-  <p>
-    We focus on AI-driven materials discovery, crystal representation learning,
-    and generative models for inverse design. This website highlights our
-    interactive research demos hosted on Hugging Face Spaces.
-  </p>
-  <p>
-    本网站现已精简为课题组核心研究工具展示页面，重点呈现基于 Hugging Face Spaces
-    的交互式应用，便于访问者直接体验相关模型与方法。
-  </p>
-  <div class="hero-badge">Interactive Research Demos</div>
+
+<h1>Xiao Research Group Demo Hub</h1>
+
+<p>
+This page showcases interactive AI demos hosted on Hugging Face Spaces.
+Users can directly try the models online without installation.
+</p>
+
+<p>
+本页面展示课题组相关的 AI 交互式 Demo，所有应用均托管在 Hugging Face Spaces，
+可以直接在线体验。
+</p>
+
 </section>
 
-<section>
-  <h2 class="section-title">Hugging Face Spaces</h2>
-  <p class="section-desc">
-    Below are our featured interactive demos. Visitors can directly explore the
-    applications online without additional installation.
-  </p>
-</section>
+
+<h2 class="section-title">Interactive AI Demos</h2>
+
 
 <script
-  type="module"
-  src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js">
+type="module"
+src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js">
 </script>
 
-<div class="space-grid">
 
-  <div class="space-card">
-    <h3>Space 01 · PyT Demo</h3>
-    <p>
-      Interactive demo deployed on Hugging Face Space for research exploration and testing.
-    </p>
-    <a class="space-link" href="https://yantongpan-pyt.hf.space" target="_blank">
-      Open in Hugging Face
-    </a>
-    <div class="space-embed">
-      <gradio-app src="https://yantongpan-pyt.hf.space"></gradio-app>
-    </div>
-  </div>
 
-  <div class="space-card">
-    <h3>Space 02 · MatterGPT</h3>
-    <p>
-      A research application for crystal/material generation and interaction.
-    </p>
-    <a class="space-link" href="https://xiaohang07-mattergpt-cpu.hf.space" target="_blank">
-      Open in Hugging Face
-    </a>
-    <div class="space-embed">
-      <gradio-app
-        src="https://xiaohang07-mattergpt-cpu.hf.space"
-        theme_mode="light">
-      </gradio-app>
-    </div>
-  </div>
+<div class="space-card">
 
-  <div class="space-card">
-    <h3>Space 03 · Your Next Demo</h3>
-    <p>
-      Replace the link below with another Hugging Face Space you want to showcase.
-    </p>
-    <a class="space-link" href="https://your-space-name.hf.space" target="_blank">
-      Open in Hugging Face
-    </a>
-    <div class="space-embed">
-      <gradio-app src="https://your-space-name.hf.space"></gradio-app>
-    </div>
-  </div>
+<h3>Z-Image-Turbo</h3>
+
+<p>
+Fast image generation demo powered by diffusion models.
+</p>
+
+<a href="https://huggingface.co/spaces/mrfakename/Z-Image-Turbo" target="_blank">
+Open on Hugging Face
+</a>
+
+<gradio-app src="https://mrfakename-z-image-turbo.hf.space"></gradio-app>
 
 </div>
 
-<p class="footer-note">
-  More interactive tools and research demos will be added here continuously.
+
+
+<div class="space-card">
+
+<h3>Wan 2-2 FP8 AOTI Preview</h3>
+
+<p>
+Preview demo for WAN model running with FP8 acceleration.
 </p>
+
+<a href="https://huggingface.co/spaces/r3gm/wan2-2-fp8da-aoti-preview" target="_blank">
+Open on Hugging Face
+</a>
+
+<gradio-app src="https://r3gm-wan2-2-fp8da-aoti-preview.hf.space"></gradio-app>
+
+</div>
+
+
+
+<div class="space-card">
+
+<h3>OpenAI Whisper</h3>
+
+<p>
+Speech recognition demo based on the Whisper model.
+</p>
+
+<a href="https://huggingface.co/spaces/openai/whisper" target="_blank">
+Open on Hugging Face
+</a>
+
+<gradio-app src="https://openai-whisper.hf.space"></gradio-app>
+
+</div>
