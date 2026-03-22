@@ -5,141 +5,305 @@ notitle: true
 ---
 
 <style>
+  .hero {
+    padding: 3.5rem 0 2rem;
+    text-align: center;
+  }
 
-.hero{
-text-align:center;
-padding:40px 0 20px;
-}
+  .hero h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
 
-.hero h1{
-font-size:2.3rem;
-font-weight:700;
-margin-bottom:10px;
-}
+  .hero p {
+    max-width: 860px;
+    margin: 0 auto 0.9rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+  }
 
-.hero p{
-max-width:800px;
-margin:auto;
-line-height:1.8;
-color:#555;
-}
+  .hero-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: #f3f6fb;
+    color: #204080;
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
 
-.section-title{
-text-align:center;
-margin-top:40px;
-font-size:1.8rem;
-font-weight:700;
-}
+  .section-title {
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+  }
 
-.space-card{
-border:1px solid #eee;
-border-radius:14px;
-padding:20px;
-margin-top:30px;
-box-shadow:0 8px 24px rgba(0,0,0,0.05);
-}
+  .section-desc {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    color: #666;
+    line-height: 1.8;
+  }
 
-.space-card h3{
-font-size:1.3rem;
-font-weight:700;
-margin-bottom:8px;
-}
+  .space-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
 
-.space-card p{
-color:#555;
-margin-bottom:10px;
-}
+  .space-card {
+    border: 1px solid #e9ecef;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
 
-.space-card a{
-font-weight:600;
-}
+  .space-card-header {
+    padding: 1.4rem 1.4rem 0.8rem;
+  }
 
-gradio-app{
-width:100%;
-min-height:700px;
-display:block;
-border-radius:12px;
-overflow:hidden;
-}
+  .space-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.65rem;
+  }
 
+  .space-card-title h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .space-tag {
+    display: inline-block;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    background: #eef4ff;
+    color: #2a4d9b;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .space-card p {
+    margin: 0 0 1rem;
+    color: #555;
+    line-height: 1.75;
+  }
+
+  .space-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-space {
+    display: inline-block;
+    padding: 0.68rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+  }
+
+  .btn-space-primary {
+    background: #204080;
+    color: #fff;
+  }
+
+  .btn-space-primary:hover {
+    background: #16325f;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .btn-space-secondary {
+    background: #f5f7fa;
+    color: #333;
+    border: 1px solid #e5e7eb;
+  }
+
+  .btn-space-secondary:hover {
+    background: #edf1f5;
+    color: #222;
+    text-decoration: none;
+  }
+
+  .space-embed {
+    border-top: 1px solid #f0f0f0;
+    padding: 1rem 1.4rem 1.4rem;
+  }
+
+  .space-note {
+    margin-top: 0.5rem;
+    font-size: 0.92rem;
+    color: #777;
+  }
+
+  gradio-app {
+    display: block;
+    width: 100%;
+    min-height: 720px;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .link-card {
+    padding: 1.4rem;
+  }
+
+  .footer-note {
+    text-align: center;
+    color: #777;
+    margin: 2rem auto 3rem;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .space-card-header,
+    .space-embed,
+    .link-card {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    gradio-app {
+      min-height: 560px;
+    }
+  }
 </style>
 
-
 <section class="hero">
-
-<h1>Xiao Research Group Demo Hub</h1>
-
-<p>
-This page showcases interactive AI demos hosted on Hugging Face Spaces.
-Users can directly try the models online without installation.
-</p>
-
-<p>
-本页面展示课题组相关的 AI 交互式 Demo，所有应用均托管在 Hugging Face Spaces，
-可以直接在线体验。
-</p>
-
+  <h1>Xiao Research Group Demo Portal</h1>
+  <p>
+    This page showcases interactive AI demos and research tools related to our work.
+    Visitors can explore selected Hugging Face Spaces directly from this website.
+  </p>
+  <p>
+    本页面用于展示课题组相关的 AI 交互式应用与研究工具，访问者可以直接在线体验部分
+    Hugging Face Spaces。
+  </p>
+  <div class="hero-badge">Interactive Hugging Face Spaces</div>
 </section>
 
-
-<h2 class="section-title">Interactive AI Demos</h2>
-
+<section>
+  <h2 class="section-title">Featured Spaces</h2>
+  <p class="section-desc">
+    We selected several representative demos for image generation, model preview,
+    and speech recognition. Some Spaces support in-page embedding, while others
+    are provided as direct links for a more stable experience.
+  </p>
+</section>
 
 <script
-type="module"
-src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js">
+  type="module"
+  src="https://gradio.s3-us-west-2.amazonaws.com/6.5.1/gradio.js">
 </script>
 
+<div class="space-grid">
 
+  <div class="space-card">
+    <div class="space-card-header">
+      <div class="space-card-title">
+        <h3>Z-Image-Turbo</h3>
+        <span class="space-tag">Embedded Demo</span>
+      </div>
+      <p>
+        A Hugging Face Space for fast image generation and visual experimentation.
+      </p>
+      <div class="space-actions">
+        <a class="btn-space btn-space-primary"
+           href="https://huggingface.co/spaces/mrfakename/Z-Image-Turbo"
+           target="_blank">
+          Open on Hugging Face
+        </a>
+        <a class="btn-space btn-space-secondary"
+           href="https://mrfakename-z-image-turbo.hf.space"
+           target="_blank">
+          Open Direct Space
+        </a>
+      </div>
+    </div>
+    <div class="space-embed">
+      <gradio-app src="https://mrfakename-z-image-turbo.hf.space"></gradio-app>
+    </div>
+  </div>
 
-<div class="space-card">
+  <div class="space-card">
+    <div class="space-card-header">
+      <div class="space-card-title">
+        <h3>Wan 2-2 FP8 AOTI Preview</h3>
+        <span class="space-tag">Embedded Demo</span>
+      </div>
+      <p>
+        A preview Space for WAN-based generation with accelerated inference setup.
+      </p>
+      <div class="space-actions">
+        <a class="btn-space btn-space-primary"
+           href="https://huggingface.co/spaces/r3gm/wan2-2-fp8da-aoti-preview"
+           target="_blank">
+          Open on Hugging Face
+        </a>
+        <a class="btn-space btn-space-secondary"
+           href="https://r3gm-wan2-2-fp8da-aoti-preview.hf.space"
+           target="_blank">
+          Open Direct Space
+        </a>
+      </div>
+    </div>
+    <div class="space-embed">
+      <gradio-app src="https://r3gm-wan2-2-fp8da-aoti-preview.hf.space"></gradio-app>
+    </div>
+  </div>
 
-<h3>Z-Image-Turbo</h3>
-
-<p>
-Fast image generation demo powered by diffusion models.
-</p>
-
-<a href="https://huggingface.co/spaces/mrfakename/Z-Image-Turbo" target="_blank">
-Open on Hugging Face
-</a>
-
-<gradio-app src="https://mrfakename-z-image-turbo.hf.space"></gradio-app>
+  <div class="space-card">
+    <div class="link-card">
+      <div class="space-card-title">
+        <h3>OpenAI Whisper</h3>
+        <span class="space-tag">External Link</span>
+      </div>
+      <p>
+        Speech recognition demo based on Whisper. This Space is provided as a direct
+        link instead of embedded content to avoid login redirect and iframe issues.
+      </p>
+      <div class="space-actions">
+        <a class="btn-space btn-space-primary"
+           href="https://huggingface.co/spaces/openai/whisper"
+           target="_blank">
+          Open on Hugging Face
+        </a>
+        <a class="btn-space btn-space-secondary"
+           href="https://openai-whisper.hf.space"
+           target="_blank">
+          Open Direct Space
+        </a>
+      </div>
+      <p class="space-note">
+        Note: this demo is linked externally for stability.
+      </p>
+    </div>
+  </div>
 
 </div>
 
-
-
-<div class="space-card">
-
-<h3>Wan 2-2 FP8 AOTI Preview</h3>
-
-<p>
-Preview demo for WAN model running with FP8 acceleration.
+<p class="footer-note">
+  More demos and research applications can be added here in the same card layout.
 </p>
-
-<a href="https://huggingface.co/spaces/r3gm/wan2-2-fp8da-aoti-preview" target="_blank">
-Open on Hugging Face
-</a>
-
-<gradio-app src="https://r3gm-wan2-2-fp8da-aoti-preview.hf.space"></gradio-app>
-
-</div>
-
-
-
-<div class="space-card">
-
-<h3>OpenAI Whisper</h3>
-
-<p>
-Speech recognition demo based on the Whisper model.
-</p>
-
-<a href="https://huggingface.co/spaces/openai/whisper" target="_blank">
-Open on Hugging Face
-</a>
-
-<gradio-app src="https://openai-whisper.hf.space"></gradio-app>
-
-</div>
